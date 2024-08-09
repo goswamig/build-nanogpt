@@ -340,7 +340,7 @@ raw_model = model.module if ddp else model #always contains the raw unwrapped mo
 max_lr = 6e-4 
 min_lr = max_lr * 0.1
 warmup_steps = 715 # refer GPT paper 375Milliontoken/total_batch_size
-max_steps = 19073 # 10B / total_batch_size
+max_steps = 19073 # Total number of tokens which is 10B / total_batch_size
 
 def get_lr(it):
     # 1) linear warmup for warmup_iters steps
